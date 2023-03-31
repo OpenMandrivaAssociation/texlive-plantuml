@@ -1,6 +1,6 @@
 Name:		texlive-plantuml
 Version:	55214
-Release:	1
+Release:	2
 Summary:	Support for rendering UML diagrams using the syntax and tool of PlantUML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plantuml
