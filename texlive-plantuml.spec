@@ -3,7 +3,7 @@ Version:	67097
 Release:	1
 Summary:	Support for rendering UML diagrams using the syntax and tool of PlantUML
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plantuml
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/plantuml
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.doc.r%{version}.tar.xz
