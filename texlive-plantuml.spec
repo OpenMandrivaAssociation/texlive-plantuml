@@ -1,5 +1,5 @@
 Name:		texlive-plantuml
-Version:	67097
+Version:	72315
 Release:	1
 Summary:	Support for rendering UML diagrams using the syntax and tool of PlantUML
 Group:		Publishing
