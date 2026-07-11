@@ -1,38 +1,22 @@
-Name:		texlive-plantuml
-Version:	72315
-Release:	1
-Summary:	Support for rendering UML diagrams using the syntax and tool of PlantUML
+%global tl_name plantuml
+%global tl_revision 79512
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.7.0
+Release:	%{tl_revision}.1
+Summary:	Support for rendering UML diagrams using PlantUML
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/plantuml
+URL:		https://www.ctan.org/tex-archive/macros/luatex/latex/plantuml
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/plantuml.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides support for rendering UML diagrams using
-the syntax and tools of PlantUML. The PlantUML syntax is very
-short and thus enables quickly specifying UML diagrams. Using
-dot, PlantUML layouts the diagrams.
+PlantUML is a program which transforms text into UML diagrams. This
+LaTeX package allows for embedding PlantUML diagrams using the PlantUML
+source. Currently, this project runs with LuaLaTeX only.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/lualatex/plantuml
-%doc %{_texmfdistdir}/doc/lualatex/plantuml
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
